@@ -1,0 +1,90 @@
+/**{
+	margin: 0;
+	padding: 0;
+	background-color:lighten(red,50%);
+}
+.elem{
+    width: 00px;
+    height:0px;
+    border: 2px solid red;
+    margin-top: 200px; 
+}
+.slider{
+	position: relative;
+	width: 300px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: #8e8bca;
+	margin: 20px;
+}
+.thumb{
+	position: relative;
+	top: -5px;
+	left: 0px;
+	width: 10px;
+	height: 20px;
+	border-radius: 4px;
+	background-color: #0a35f7;
+	cursor: e-resize;
+}
+.draggable{
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+}
+#pers1{
+	background-color: #f70a0a;
+	}
+#pers2{
+	background-color: #f7d40a;
+}
+#pers3{
+	background-color: #4df70a;
+}*/
+
+
+
+
+form {
+    width: 300px; 
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #cccccc;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    font-family: "Roboto", sans-serif;
+    border-radius: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 95%;
+    height: 24px;
+    margin-bottom:10px;
+    padding: 2px 5px;
+    border: 1px solid #cccccc;
+    
+}
+
+input[type="submit"], 
+input[type="reset"] { 
+    display: inline-block;
+    margin: 0 5px;
+    padding: 6px 15px;
+    color: #ffffff;
+    background: #2c3e50;
+    border: none;
+}
+
+.buttons {
+    margin-top: 10px;
+    text-align: center;
+}
