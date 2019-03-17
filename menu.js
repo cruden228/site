@@ -180,7 +180,7 @@ document.addEventListener("mousedown", (event) => {
 	const shiftX = event.clientX - ourElement.getBoundingClientRect().left; 
 	const shiftY = event.clientY - ourElement.getBoundingClientRect().top;
 
-	ourElement.style.position = "fixed";
+	ourElement.style.position = "absolute";
 
 	document.body.appendChild(ourElement);
 
@@ -213,6 +213,82 @@ document.addEventListener("mousedown", (event) => {
 
 
 
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
 
 
-console.log("a" > "A");
+const field = document.getElementById("field");
+const ball = document.getElementById("ball");
+
+
+field.addEventListener("mousedown",(e)=>{
+
+	fieldInnerCoords={
+		left: field.getBoundingClientRect().left - field.clientLeft,
+		top: field.getBoundingClientRect().top - field.clientTop,
+	};
+	console.log(ball.clientWidth / 2);
+	console.log(fieldInnerCoords.left);
+
+	ballCoords = {
+		left: e.clientX - fieldInnerCoords.left - ball.clientWidth,
+		top: e.clientY - fieldInnerCoords.top - ball.clientHeight,
+	};
+
+	if(ballCoords.left < 0) ballCoords.left = 0;
+	if(ballCoords.top < 0) ballCoords.top = 0;
+	if(ballCoords.left + ball.clientWidth > field.clientWidth) ballCoords.left = field.clientWidth - ball.clientWidth;
+	if(ballCoords.top + ball.clientHeight > field.clientHeight) ballCoords.top = field.clientHeight - ball.clientHeight;
+
+	ball.style.left = ballCoords.left +'px';
+	ball.style.top = ballCoords.top +'px';
+
+}, false);
+
+
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+
+
+
+const removePost = document.getElementById("removePost");
+
+removePost.addEventListener("click", (e)=>{
+	if(!e.target.classList.contains("remove-button")) return;
+	if(!e.target.parentNode.classList.contains("pane")) return;
+	e.target.parentNode.style.display = 'none';
+}, false);
+
+
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+
+
+
+const grid = document.getElementById("grid");
+
+
+grid.addEventListener("click", (e)=>{
+	if(!e.target.getAttribute('data-type')) return;
+	const arrNotSort = [];
+	switch(e.target.getAttribute('data-type')){
+		case 'number':
+			console.log(e.target.cellIndex);
+			arrNotSort
+			break;
+	}
+}, false);

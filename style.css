@@ -1,7 +1,10 @@
-/**{
+*{
 	margin: 0;
 	padding: 0;
 	background-color:lighten(red,50%);
+}
+hr{
+    margin: 10px 0;
 }
 .elem{
     width: 00px;
@@ -40,51 +43,60 @@
 }
 #pers3{
 	background-color: #4df70a;
-}*/
-
-
-
-
-form {
-    width: 300px; 
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #cccccc;
+}
+#field {
+    width: 200px;
+    height: 150px;
+    background-color: #00FF00;
+    position: relative;
+    cursor: default;
+    border: 10px solid black;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
+#ball {
+    position: absolute;
+    cursor: pointer;
+    top:0px;
+    left:0px;
+    transition: all 1s;
 }
 
-input {
-    font-family: "Roboto", sans-serif;
-    border-radius: 5px;
+.pane {
+    position: relative;
+    background: #edf5e1;
+    padding: 10px 20px 10px;
+    border-top: solid 2px #c4df9b;
 }
 
-input[type="text"],
-input[type="password"] {
-    width: 95%;
+.pane h3 {
+    margin: 0;
+    padding-bottom: .3em;
+    font-size: 1.1em;
+}
+
+.pane p {
+    margin: 0;
+    padding: 0 0 .5em;
+}
+
+.remove-button {
+    font-size: 110%;
+    color: darkred;
+    right: 10px;
+    width: 24px;
     height: 24px;
-    margin-bottom:10px;
-    padding: 2px 5px;
-    border: 1px solid #cccccc;
-    
-}
-
-input[type="submit"], 
-input[type="reset"] { 
-    display: inline-block;
-    margin: 0 5px;
-    padding: 6px 15px;
-    color: #ffffff;
-    background: #2c3e50;
     border: none;
+    background: transparent;
+    cursor: pointer;
+}
+.pane .remove-button {
+    position: absolute;
+    top:0;
+}
+#grid tr th:first-child {
+    cursor: pointer;
 }
 
-.buttons {
-    margin-top: 10px;
-    text-align: center;
+#grid tr th:first-child:hover {
+    background: yellow;
 }
